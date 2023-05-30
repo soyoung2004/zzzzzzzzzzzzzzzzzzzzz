@@ -1,0 +1,269 @@
+<hr />
+
+
+
+
+
+
+
+ { toDos.map(item, index) => (<li key= { index}>  {item}))}
+
+
+
+ 
+
+
+
+import (useeffect, usestate) from "react";
+
+
+
+
+
+function App() {const [ loading, setloading ] =usestate(true)
+
+
+
+useEffect(()=> fetch ("").then((response)=> response.json())
+
+
+
+.then ((json)=>{ setcoins(json); setloading(false);});},[]);
+
+
+
+
+
+
+
+return (<div><h1>The coins!</h1> {loading ? "" : '(${coins.length })'<strong>Loading...</strong> : <select> {coins.map((coin) => <li>
+
+
+
+{coin.name} ({coin.symbol}); ${coin.quotes.USD.price
+
+
+
+
+
+<</select>>}</div>;}
+
+
+
+export default App;
+
+
+
+
+
+
+
+
+
+import [  {useeffect, usestate} ]
+
+
+
+
+
+function app() { const[ loading, setloading ] =usestate(true);
+
+
+
+const json = await( await fetch ("")
+
+
+
+)).json
+
+
+
+
+
+setmovies(json.data.movies);
+
+
+
+setloading(false);};
+
+
+
+useeffect(()=>{ getmovies(); }, []);
+
+
+
+Return ( <div> {loading ? (<h1>
+
+LOading...</h1>
+
+):(
+
+<div> {movies.map((movie) => (<movie cover={movies.medium_cover_image} />})) </div>)} (</div>);
+
+
+
+
+
+
+
+Function app() {return null;}
+
+Export default app;
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div> {movies.app((movie => (<div key = {movie.id}><img src={movie.medium_cover_image} />
+
+
+
+<h2>{movie.title}</h2>
+
+
+
+<p>{movie.summary}</p>
+
+
+
+<ul>{movie.genres.map((g) => (<li key ={g}>{g}</li>
+
+<div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home.  Js
+
+Import {link } from "react-router-dom";
+
+Importnproptypes from "prop-types";
+
+
+
+function movie ({id, coverimg, title, summary, genres }) {return
+
+(<div>
+
+
+
+<h2><link  to ="/movie/${id} ">{title}</link></h2>
+
+
+
+<p>{summary}</p>
+
+
+
+<ul>{genres.map((g) => (<li key ={g}>{g}</li>))}
+
+</ul>
+
+<div>
+
+);
+
+}
+
+
+
+Movie.proptypes ={} coverimg:propstypes.string.isrequired, TITLE :PROPTYPES .STRING .ISREQUIRED,
+
+SUMMARY:PROPTYPES.STRING.ISREQUIRED,
+
+GENRES:PROPTYPES.ARRAYOF(PROPTYPES.STRING).ISREQUERED, };
+
+
+
+
+
+<div>{movies.map((movies=>(<movie key={id:movie}
+
+<movie
+
+Key={movie.id}
+
+Id={movie.id}
+
+Coverimg={movie.medium_cover_image}
+
+Title={movie.title}
+
+Summary  ={movie.summary}
+
+Genres ={movie.genres}
+
+/>
+
+}
+
+
+
+
+
+
+
+Export default Movie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Import {useeffect} from. "React";
+
+Import {useparams}   from. "React -ruouter-dom";
+
+
+
+Function detail() {
+
+Const {id}   = useparams();
+
+Const getmovid = async ()
+
+Useeffect(((=>fetch(''${id}){}, []);
+
+Const json =await
+
+Await fetch ('').json ();
+
+Useeffect (()=>{getmovie},  []);
+
+return <h1>detail</h1>;}}
+
+
+
+Export default detail;
